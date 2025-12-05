@@ -135,7 +135,7 @@
                 <div class="p-4 bg-slate-50 rounded-lg">
                     <h4 class="font-bold text-slate-900 mb-2">1. 제품 상태 (필독)</h4>
                     <ul class="list-disc pl-4 space-y-1 text-red-600 font-medium">
-                        <li>모든 제품은 <strong>회사 업무용으로 사용된 중고품</strong>입니다.</li>
+                        <li>모든 제품은 <strong>회사 업무용으로 사용된 중고품(B급)</strong>입니다.</li>
                         <li><strong>Windows OS(정품키)는 포함되어 있지 않습니다.</strong> (포맷 후 지급)</li>
                         <li>외관상 스크래치, 찍힘, 사용감이 존재할 수 있습니다.</li>
                         <li>배터리는 소모품이므로 보증 대상이 아닙니다.</li>
@@ -160,10 +160,10 @@
         // ==========================================
         const GOOGLE_FORM_URL = "https://forms.google.com/"; 
 
-        // --- Data (Reflecting 2025 Sheet & Pivot Table Count) ---
-        // 이미지는 './images/그룹명.jpg'를 자동으로 참조합니다. (확장자 소문자 jpg)
-        // 1. Monitor Groups
+        // --- Data ---
+        // 이미지는 './images/그룹명.png'를 자동으로 참조합니다.
         const products = [
+            // 1. Monitor Groups
             { 
                 id: "모니터27-A", 
                 category: "Monitor", 
@@ -179,8 +179,8 @@
                 price: 40000, 
                 grade: "B", 
                 stock: 2, 
-                specs: "Dell U2719D / 27inch QHD / IPS", 
-                issue: "연식에 따른 사용감, 화면 상태 양호, 박스 없음" 
+                specs: "Dell U2721D / 27inch QHD / IPS", 
+                issue: "박스 없음, 생활 기스 있음" 
             },
             { 
                 id: "모니터27-C", 
@@ -188,8 +188,8 @@
                 price: 40000, 
                 grade: "B", 
                 stock: 4, 
-                specs: "Dell U2717D / 27inch QHD / IPS", 
-                issue: "외관 사용감 다수, 기능 정상, 박스 없음" 
+                specs: "Dell U2715H / 27inch QHD / IPS", 
+                issue: "박스 없음, 구형 모델" 
             },
             { 
                 id: "모니터27-D", 
@@ -197,8 +197,8 @@
                 price: 35000, 
                 grade: "B", 
                 stock: 16, 
-                specs: "Dell U2715H / 27inch QHD / IPS", 
-                issue: "구형 모델, 화면 멍/암점 없음 확인, 박스 없음" 
+                specs: "Dell U2719D / 27inch QHD / IPS", 
+                issue: "박스 없음, 화면 상태 확인" 
             },
 
             // 2. Desktop - Ryzen
@@ -208,7 +208,7 @@
                 price: 300000, 
                 grade: "B", 
                 stock: 1, 
-                specs: "Ryzen 5 3600XT / 64GB / RTX 2060 SUPER", 
+                specs: "AMD 라이젠 5 3600XT (추정) / 64GB / Samsung EVO 970 Plus 500GB / RTX 2060 SUPER", 
                 issue: "OS 미포함, 케이스 찍힘 존재" 
             },
             { 
@@ -217,7 +217,7 @@
                 price: 200000, 
                 grade: "B", 
                 stock: 2, 
-                specs: "Ryzen 5 3500X / 32GB / GTX 1650", 
+                specs: "AMD 라이젠 5 3500X / 32GB / Samsung EVO 970 Plus 500GB / GTX 1650", 
                 issue: "OS 미포함, 업무용 사용감 다수" 
             },
             { 
@@ -226,7 +226,7 @@
                 price: 300000, 
                 grade: "B", 
                 stock: 1, 
-                specs: "Ryzen 7 3700X / 64GB / GTX 1650", 
+                specs: "AMD 라이젠 7 3700X / 64GB / Samsung EVO 970 Plus 500GB / GTX 1650", 
                 issue: "OS 미포함, 내부 먼지 청소 권장" 
             },
 
@@ -237,7 +237,7 @@
                 price: 300000, 
                 grade: "B", 
                 stock: 5, 
-                specs: "i5-10400 / 32GB / GTX 1650", 
+                specs: "Intel i5-10400 / 32GB / 500GB / GTX 1650", 
                 issue: "OS 미포함, 전면부 USB 포트 사용감" 
             },
             { 
@@ -246,7 +246,7 @@
                 price: 350000, 
                 grade: "B", 
                 stock: 2, 
-                specs: "i5-12400F / 32GB / GTX 1650", 
+                specs: "Intel i5-12400F / 32GB / 500GB / GTX 1650", 
                 issue: "OS 미포함, 상태 양호" 
             },
             { 
@@ -255,8 +255,8 @@
                 price: 250000, 
                 grade: "B", 
                 stock: 2, 
-                specs: "i5-10400 / 32GB / 내장그래픽", 
-                issue: "OS 미포함, 사무용 세팅" 
+                specs: "Intel i5-9600K / 32GB / 500GB", 
+                issue: "OS 미포함, 내장그래픽 사용" 
             },
             { 
                 id: "인텔7-A", 
@@ -264,7 +264,7 @@
                 price: 300000, 
                 grade: "B", 
                 stock: 2, 
-                specs: "i7-10700K / 64GB / GTX 1650", 
+                specs: "Intel i7-10700K / 64GB / Samsung SSD 980 PRO 500GB / GTX 1650", 
                 issue: "OS 미포함, 고성능 작업용, 사용감 있음" 
             },
             { 
@@ -273,7 +273,7 @@
                 price: 500000, 
                 grade: "B", 
                 stock: 1, 
-                specs: "i7-10700K / 64GB / RTX 3070", 
+                specs: "Intel i7-10700K / 64GB / Samsung SSD 980 PRO 500GB / RTX 3070", 
                 issue: "OS 미포함, 그래픽 카드 고사양" 
             },
             { 
@@ -282,7 +282,7 @@
                 price: 300000, 
                 grade: "B", 
                 stock: 1, 
-                specs: "i7-10700K / 64GB / GTX 1050Ti", 
+                specs: "Intel i7-10700K / 64GB / Samsung EVO 970 Plus 2TB / GTX 1050Ti", 
                 issue: "OS 미포함, SSD 2TB 장착" 
             },
             { 
@@ -291,7 +291,7 @@
                 price: 500000, 
                 grade: "B", 
                 stock: 1, 
-                specs: "i7-11700K / 64GB / RTX 3060", 
+                specs: "Intel i7-9700K / 32GB / 500GB / GTX 1650 / 600W", 
                 issue: "OS 미포함, 상태 최상급" 
             },
 
@@ -303,7 +303,7 @@
                 grade: "B", 
                 stock: 3, 
                 specs: "LG Gram 15Z90N / i5-10th / 8GB / 256GB", 
-                issue: "OS 미포함, 키보드 번들거림, 외관 생활 기스" 
+                issue: "OS 미포함, 키보드 번들거림" 
             },
             { 
                 id: "Macbook-A", 
@@ -311,8 +311,8 @@
                 price: 2940000, 
                 grade: "B", 
                 stock: 1, 
-                specs: "MacBook Pro 16 (M3 Pro) / 36GB / 512GB", 
-                issue: "단기 사용, 외관 상태 A급이나 정책상 B급 표기" 
+                specs: "Intel i7 / 16GB / 250GB / Intel 630 / 배터리 사이클 213", 
+                issue: "B급 표기 정책, 맥OS 초기화 완료" 
             },
             { 
                 id: "Macbook-B", 
@@ -320,8 +320,8 @@
                 price: 450000, 
                 grade: "B", 
                 stock: 1, 
-                specs: "MacBook Pro 16 (Intel 2019) / i7 / 16GB", 
-                issue: "배터리 방전 가능성, 발열 있음, 인텔 맥북" 
+                specs: "Intel i7 / 32GB / 500GB / Intel 630 / 배터리 사이클 227", 
+                issue: "배터리 보증 불가, 외관 사용감 있음" 
             }
         ];
 
@@ -329,7 +329,7 @@
         let state = { activeCategory: 'All', searchTerm: '', myEntries: [], selectedProduct: null };
 
         const formatPrice = (price) => price.toLocaleString() + '원';
-        const getGradeColor = (grade) => "bg-green-100 text-green-700 border-green-200"; // All B Grade
+        const getGradeColor = (grade) => "bg-green-100 text-green-700 border-green-200"; 
 
         // --- Render Functions ---
         function renderNavbar() {
@@ -368,9 +368,7 @@
             container.innerHTML = filtered.map(p => {
                 const isEntered = state.myEntries.includes(p.id);
                 let fallbackIcon = p.category === 'Laptop' ? 'laptop' : p.category === 'Monitor' ? 'monitor' : 'cpu';
-                
-                // Image Path Construction (Github Pages friendly)
-                const imgPath = `./images/${p.id}.jpg`;
+                const imgPath = `./images/${p.id}.png`;
 
                 return `
                 <div onclick="openProductModal('${p.id}')" class="group relative bg-white rounded-2xl overflow-hidden border transition-all hover:shadow-xl hover:-translate-y-1 cursor-pointer ${isEntered ? 'border-blue-500 ring-1 ring-blue-500 shadow-blue-100' : 'border-slate-200 shadow-sm'}">
@@ -380,7 +378,6 @@
                     ${isEntered ? `<div class="absolute inset-0 bg-blue-900/10 z-20 pointer-events-none flex items-center justify-center"><div class="bg-blue-600 text-white px-4 py-2 rounded-full font-bold shadow-lg flex items-center gap-2 fade-in"><i data-lucide="check-circle-2" class="w-4 h-4"></i> 담기 완료</div></div>` : ''}
                     
                     <div class="aspect-[5/4] bg-slate-100 flex items-center justify-center overflow-hidden relative">
-                        <!-- Image with Fallback Logic -->
                         <img src="${imgPath}" alt="${p.id}" class="w-full h-full object-cover img-zoom" 
                              onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center text-slate-400\'><i data-lucide=${fallbackIcon} class=\'w-12 h-12 stroke-1 mb-2\'></i><span class=\'text-xs font-mono\'>${p.id}</span></div>'; lucide.createIcons();">
                     </div>
@@ -448,7 +445,7 @@
              const p = products.find(prod => prod.id === id);
              const isEntered = state.myEntries.includes(p.id);
              let fallbackIcon = p.category === 'Laptop' ? 'laptop' : p.category === 'Monitor' ? 'monitor' : 'cpu';
-             const imgPath = `./images/${p.id}.jpg`;
+             const imgPath = `./images/${p.id}.png`;
 
              document.getElementById('modal-content').innerHTML = `
                 <button onclick="closeProductModal()" class="absolute top-4 right-4 p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors z-20"><i data-lucide="x" class="w-5 h-5"></i></button>
